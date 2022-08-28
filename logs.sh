@@ -1,0 +1,1 @@
+docker logs -f --tail 1000 --follow --timestamps react-electron-app
