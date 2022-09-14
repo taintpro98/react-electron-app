@@ -1,12 +1,30 @@
 import React from "react";
 import "./App.css";
-import { Login } from "./components";
+import { Homepage, Login } from "./pages";
+import { BrowserRouter as Router, Switch, Route, Link } from "react-router-dom";
 
 function App() {
   return (
-    <div className="App">
-      <Login />
-    </div>
+    <Router>
+      <div>
+        <ul>
+          <li>
+            <Link to="/">Home</Link>
+          </li>
+          <li>
+            <Link to="/login">Login</Link>
+          </li>
+        </ul>
+        <Switch>
+          <Route exact path="/">
+            <Homepage/>
+          </Route>
+          <Route path="/login">
+            <Login />
+          </Route>
+        </Switch>
+      </div>
+    </Router>
   );
 }
 

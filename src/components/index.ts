@@ -1,5 +1,5 @@
-import Login from './Login/Login';
+import Loading from './Loading';
 
 export {
-  Login
+  Loading
 }
