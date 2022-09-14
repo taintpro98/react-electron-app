@@ -7,14 +7,14 @@ function App() {
   return (
     <Router>
       <div>
-        <ul>
+        {/* <ul>
           <li>
             <Link to="/">Home</Link>
           </li>
           <li>
             <Link to="/login">Login</Link>
           </li>
-        </ul>
+        </ul> */}
         <Switch>
           <Route exact path="/">
             <Homepage/>
