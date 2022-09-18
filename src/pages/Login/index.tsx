@@ -1,6 +1,7 @@
 // import React, { FormEventHandler, useState } from "react";
-// import axios from "axios";
+import axios from "axios";
 import { useForm } from "../../components";
+import { baseURL } from "../../configs/axios";
 
 function Login() {
   const initialState = {
@@ -9,7 +10,11 @@ function Login() {
   };
 
   const login = async () => {
-    console.log("login", values);
+    const response = await axios.post(`${baseURL}/login`, {
+      username: 'bruno',
+      password: '1234'
+    })
+    console.log(response);
   };
 
   const { onChange, onSubmit, values } = useForm(login, initialState);
